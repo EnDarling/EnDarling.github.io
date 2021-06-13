@@ -1,2 +1,104 @@
-<P>Hello !<p>
-<p>11111111<p>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>留言页面</title>
+		<link rel="stylesheet" type="text/css" href="css/message.css"/>
+		<script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#messageContent').on('focus', function(){
+					$('.message').toggle('blind', 500)
+					
+					// 设置了定时器，上一个动画到下一个动画之间间隔了0.5秒
+					setTimeout(function(){
+						$("textarea").animate({
+							height:'200px'
+						},300);
+					},500)
+				})
+				
+				// $('#messageContent').on('focus',function(){
+				// 	setTimeout(function(){
+				// 		$("textarea").animate({
+				// 			height:'200px'
+				// 		},300);
+				// 	},500)
+				// })
+				
+				
+				$('#sendMessage').on('click', function(){
+					$('.message').toggle('blind', 500)
+					
+					$('textarea').animate({
+						height:'80px'
+					}, 300);
+					
+					var $html = "<li><div class='content'>" + $('#messageContent').val() + "</div></li>"
+					
+					if($('#messageContent').val()!=''){
+						setTimeout(function(){
+							// prepend() 方法在被选元素的开头（仍位于内部）插入指定内容。
+							$(".message").prepend($html);
+							$("textarea").val("");
+						}, 500)
+					}
+				})
+				
+				// $('#sendMessage').on('click',function(){
+				// 	$('textarea').animate({
+				// 		height:'80px'
+				// 	}, 300);
+				// })
+				
+			})
+			
+		</script>
+		
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="comment">
+				<ul class="message">
+					<li>
+						<p class="content">xxxx</p>
+					</li>
+					<li>
+						<p class="content">xxxx</p>
+					</li>
+					<li>
+						<p class="content">xxxx</p>
+					</li>
+					<li>
+						<p class="content">xxxx</p>
+					</li>
+					<li>
+						<p class="content">xxxx</p>
+					</li>
+				</ul>
+				
+				<div class="sendMessageWrap">
+					<textarea placeholder="输入留言内容..." id="messageContent"></textarea>
+					
+					<button type="button" id="sendMessage">发布留言</button>
+				</div>
+			</div>
+		</div>
+		
+		<!-- jquery on() 
+			$('').on({
+				'click':function(){
+					
+				},
+				'mouseover':function(){
+					
+				}
+			}) 
+		-->
+		
+		<!-- return false -->
+		
+	</body>
+	
+</html>

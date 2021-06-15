@@ -1,0 +1,16 @@
+{
+  "id": "2583994",
+  "name": "bilibili动画",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8473179",
+      "name": "bilibili",
+      "font_class": "bilibili",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" type="image/vnd.microsoft.icon" href="https://www.bilibili.com/favicon.ico"> -->
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+    <title>bilibili</title>
+    <link rel="stylesheet" href="css/iconfont.css">
+    <script src="js/iconfont.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* html{font-size: 26.66667vw;}
+        body{font-size: 16px;} */
+        .icon {
+            width: 25px;
+            height: 25px;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+            position: absolute;
+            top: 15px;
+            left: 140px;
+            animation: fall0 1s;
+            animation-fill-mode: forwards;
+        }
+        .box1{
+            width: 25px;
+            height: 25px;
+            background-color: #FF91B0;
+            border-radius: 5px;
+            position: absolute;
+            top: 50px;
+            left: 140px;
+            animation: fall1 1.5s;
+            animation-delay: 0.24s;
+            animation-fill-mode: forwards;
+        }
+        .box2{
+            width: 25px;
+            height: 25px;
+            background-color: #65D4A6;
+            border-radius: 5px;
+            position: absolute;
+            top: 50px;
+            left: 180px;
+            animation: fall2 1.5s;
+            animation-delay: 1.3s;
+            animation-fill-mode: forwards;
+        }
+        .box3{
+            width: 25px;
+            height: 25px;
+            background-color: #FFC154;
+            border-radius: 5px;
+            position: absolute;
+            top: 50px;
+            left: 220px;
+            animation: fall3 1s;
+            animation-delay: 2.4s;
+            animation-fill-mode: forwards;
+        }
+        .wrap{
+            width: 390px;
+            height: 130px;
+            /* border: 1px solid black; */
+            margin: 300px auto;
+            position: relative;
+        }
+
+        @keyframes fall0{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+                top: 50px;
+            }
+        }
+        @keyframes fall1{
+            0%{
+                top: 50px;
+            }
+            35%{
+                top: 85px;
+                left: 140px;
+            }
+            65%{
+                top: 85px;
+                left: 180px;
+            }
+            100%{
+                top: 50px;
+                left: 180px;
+            }
+        }
+        @keyframes fall2{
+            0%{
+                top: 50px;
+            }
+            35%{
+                top: 15px;
+                left: 180px;
+            }
+            65%{
+                top: 15px;
+                left: 220px;
+            }
+            100%{
+                top: 50px;
+                left: 220px;
+            }
+        }
+        @keyframes fall3{
+            0%{
+                top: 50px;
+            }
+            50%{
+                opacity: 1;
+                top: 85px;
+            }
+            100%{
+                top: 100px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-bilibili"></use>
+        </svg>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    
+</body>
+</html>

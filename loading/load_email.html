@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>loading</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/Icomoon/style.css" rel="stylesheet" type="text/css" />
+	<script>window.onload=function(){document.getElementById('loading-center').addEventListener('click',function(){window.history.back();})}</script>
+	<style>
+	#loading{
+		background-color: #CF5643;
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		z-index: 1;
+		margin-top: 0px;
+		top: 0px;
+	}
+	#loading-center{
+		width: 100%;
+		height: 100%;
+		position: relative;
+		}
+	#loading-center-absolute {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		height: 60px;
+		width: 60px;
+		margin-top: -75px;
+		margin-left: -30px;
+	    -webkit-animation: loading-center-absolute 1s infinite;
+		animation: loading-center-absolute 1s infinite;
+	}
+	.p1{
+		color: white;
+		position: absolute;
+		right: 5%;
+		bottom: 2%;
+		font-size: larger;
+	}
+	.object{
+		width: 20px;
+		height: 20px;
+		background-color: #FFF;
+		float: left;
+		-moz-border-radius: 50% 50% 50% 50%;
+		-webkit-border-radius: 50% 50% 50% 50%;
+		border-radius: 50% 50% 50% 50%;
+		margin-right: 20px;
+		margin-bottom: 20px;	
+	}
+	.object:nth-child(2n+0) {
+		margin-right: 0px;
+
+	}
+	#object_one{
+		-webkit-animation: object_one 1s infinite;
+		animation: object_one 1s infinite;
+		}
+	#object_two{
+		-webkit-animation: object_two 1s infinite;
+		animation: object_two 1s infinite;
+		}	
+	#object_three{
+		-webkit-animation: object_three 1s infinite;
+		animation: object_three 1s infinite;
+		}		
+	#object_four{
+		-webkit-animation: object_four 1s infinite;
+		animation: object_four 1s infinite;
+		}		
+		
+	@-webkit-keyframes loading-center-absolute{
+	100% {
+	    -ms-transform: rotate(360deg); 
+	   	-webkit-transform: rotate(360deg); 
+	    transform: rotate(360deg); 
+		}			
+		
+	}		
+	@keyframes loading-center-absolute{
+	100% {
+	    -ms-transform: rotate(360deg); 
+	   	-webkit-transform: rotate(360deg); 
+	    transform: rotate(360deg); 
+		}
+	}						
+	@-webkit-keyframes object_one{
+	50% {
+	    -ms-transform: translate(20px,20px); 
+	   	-webkit-transform: translate(20px,20px);
+	    transform: translate(20px,20px);
+		}
+	}		
+	@keyframes object_one{
+	50% {
+	     -ms-transform: translate(20px,20px); 
+	   	-webkit-transform: translate(20px,20px);
+	    transform: translate(20px,20px);
+		}
+	}
+	@-webkit-keyframes object_two{
+	50% {
+	    -ms-transform: translate(-20px,20px); 
+	   	-webkit-transform: translate(-20px,20px);
+	    transform: translate(-20px,20px);
+		}
+	}		
+	@keyframes object_two{
+	50% {
+	    -ms-transform: translate(-20px,20px); 
+	   	-webkit-transform: translate(-20px,20px);
+	    transform: translate(-20px,20px);
+		}
+	}
+	@-webkit-keyframes object_three{
+	50% {
+	    -ms-transform: translate(20px,-20px); 
+	   	-webkit-transform: translate(20px,-20px);
+	    transform: translate(20px,-20px);
+		}
+	}		
+	@keyframes object_three{
+	50% {
+	    -ms-transform: translate(20px,-20px); 
+	   	-webkit-transform: translate(20px,-20px);
+	    transform: translate(20px,-20px);
+		}
+	}
+	@-webkit-keyframes object_four{
+	50% {
+	    -ms-transform: translate(-20px,-20px); 
+	   	-webkit-transform: translate(-20px,-20px);
+	    transform: translate(-20px,-20px);
+		}
+	}		
+	@keyframes object_four{
+	50% {
+	    -ms-transform: translate(-20px,-20px); 
+	   	-webkit-transform: translate(-20px,-20px);
+	    transform: translate(-20px,-20px);
+		}
+	}
+	</style>
+</head>
+<body>
+	<div id="loading">
+		<div id="loading-center">
+			<div id="loading-center-absolute">
+				<div class="object" id="object_one"></div>
+				<div class="object" id="object_two"></div>
+				<div class="object" id="object_three"></div>
+				<div class="object" id="object_four"></div>
+			</div>
+				<p class="p1">Loading...</p>
+		</div>
+	</div>
+</body>
+</html>

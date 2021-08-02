@@ -1,9 +1,4 @@
-/* 
-	加载动画插件
-	version: 1.1.0
-	author: 顾晨
-	github: https://github.com/webdick/loadingJS
-	
+/* 	
 	建议为需隐藏的元素添加 style="display: none;" 这样效果会达到最好
 	
 	el:'#load',//绑定元素容器
@@ -14,9 +9,7 @@
 	delTime:3000,//完全删除动画元素时间(包括容器) 默认3000毫秒
 	callback:()=>{
 		// 加载完成回调
-		
 	}
-
 */
 ;(function(){
 	class Load{
@@ -147,7 +140,7 @@
 				  position: fixed;
 				  top: 0px;
 				  left: 0px;
-				  z-index: 1000;
+				  z-index: 99999999;
 				  width: 100%;
 				  height: 100%;
 				  padding: 0;
